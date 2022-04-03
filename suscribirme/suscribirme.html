@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,8 +11,12 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Patrick+Hand">
     <title>Jam Glass - Suscribirme</title>
 </head>
+
 <body>
     <header>
+        <div class="onlyDevice menu">
+            <i class="fa-solid fa-bars onlyDevice"></i>
+        </div>
         <nav class="header__container">
             <ul>
                 <li><a class="header__item" href="../inicio/inicio.html">Inicio</a></li>
@@ -28,15 +33,15 @@
         <h1>Suscribirme</h1>
         <h2 class="suscribirme--center">Entérate de las novedades de Jam Glass</h2>
         <form action="" method="post" class="suscribirme__formulario">
-            <fieldset >
-                <legend >Datos Personales</legend>
+            <fieldset>
+                <legend>Datos Personales</legend>
                 <table border="0" cellpadding="10" cellspacing="0" class="suscribirme__formulario">
                     <tr>
-                        <td >Nombre:</td>
+                        <td>Nombre:</td>
                         <td><input type="text" placeholder="Ingrese su nombre"></td>
                     </tr>
                     <tr>
-                        <td >Apellido:</td>
+                        <td>Apellido:</td>
                         <td><input type="text" placeholder="Ingrese su apellido"></td>
                     </tr>
                     <tr>
@@ -56,27 +61,44 @@
                 </table>
             </fieldset>
             <fieldset>
-                        <input type="checkbox" id="consulta1" name="consulta1" value="1" checked="checked">Deseo recibir novedades de la banda en mi casilla de mail
-                </fieldset>
-                        <input type="submit" value="enviar" class="suscribirme-formulario-boton">
-        </form> 
-        
+                <input type="checkbox" id="consulta1" name="consulta1" value="1" checked="checked">Deseo recibir
+                novedades de la banda en mi casilla de mail
+            </fieldset>
+            <input type="submit" value="enviar" class="suscribirme-formulario-boton">
+        </form>
+
     </section>
-    
-    <footer>
-        <div class="footer__container">
-            <div class="footer__item--left">
+
+    <footer class="footLeft footer__container onlyDesktop">
+        <div class="footer__item--left">
+            <i class="fab fa-instagram footer-item-icon"></i>
+            <i class="fab fa-facebook footer-item-icon"></i>
+            <i class="fab fa-youtube footer-item-icon"></i>
+        </div>
+    </footer>
+    <footer class="footCenter footer__container onlyDesktop">
+        <div class="footer__item--center">
+            <i class="far fa-envelope footer-item-icon"></i> jamglass18@gmail.com
+        </div>
+    </footer>
+    <footer class="footRight footer__container onlyDesktop">
+        <div class="footer__item--right">
+            <a href="#suscribirme"><i class="fas fa-angle-double-up footer-item-icon"></i></a>
+        </div>
+    </footer>
+    <footer class="index__footer__container onlyDevice">
+        <div class="index__footer__item">
+            <div>
                 <i class="fab fa-instagram footer-item-icon"></i>
+            </div>
+            <div>
                 <i class="fab fa-facebook footer-item-icon"></i>
+            </div>
+            <div>
                 <i class="fab fa-youtube footer-item-icon"></i>
-            </div>
-            <div class="footer__item--center">
-                    <i class="far fa-envelope footer-item-icon"></i> jamglass18@gmail.com
-            </div>
-            <div class="footer__item--right">
-                <a href="#suscribirme"><i class="fas fa-angle-double-up footer-item-icon"></i></a>
             </div>
         </div>
     </footer>
 </body>
+
 </html>
