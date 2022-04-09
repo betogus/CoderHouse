@@ -9,6 +9,7 @@
     <link rel="icon" href="../jamglass.ico">
     <script src="https://kit.fontawesome.com/5406b95b28.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Patrick+Hand">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Jam Glass - Shows</title>
 </head>
 
@@ -30,7 +31,7 @@
         </nav>
     </header>
     <section id="shows" class="shows" style="height:900px">
-        <h1>Shows</h1>
+        <h1 data-aos="fade-up" data-aos-duration="1000">Shows</h1>
         <table class="shows__fecha">
             <tr>
                 <th class="shows__fecha--left">
@@ -75,6 +76,11 @@
             </div>
         </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>

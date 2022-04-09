@@ -9,6 +9,7 @@
     <link rel="icon" href="../jamglass.ico">
     <script src="https://kit.fontawesome.com/5406b95b28.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Patrick+Hand">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Jam Glass - Galería</title>
 </head>
 
@@ -30,20 +31,20 @@
         </nav>
     </header>
     <section id="galeria" class="galeria">
-        <h1>Galería</h1>
+        <h1 data-aos="fade-up" data-aos-duration="1000">Galería</h1>
         <div class="galeria__grid-container">
-            <img class="galeria__imagen horizontal" src="../galeria/img/DSC_0042.jpg">
-            <img class="galeria__imagen vertical" src="../galeria/img/DSC_0030.jpg">
-            <img class="galeria__imagen horizontal" src="../galeria/img/DSC_0266.jpg">
-            <img class="galeria__imagen vertical" src="../galeria/img/DSC_0114.jpg">
-            <img class="galeria__imagen horizontal" src="../galeria/img/DSC_0060.jpg">
-            <img class="galeria__imagen horizontal" src="../galeria/img/DSC_0067.jpg">
-            <img class="galeria__imagen vertical" src="../galeria/img/DSC_0071.jpg">
-            <img class="galeria__imagen horizontal" src="../galeria/img/DSC_0091.jpg">
-            <img class="galeria__imagen vertical" src="../galeria/img/DSC_0121.jpg">
-            <img class="galeria__imagen horizontal" src="../galeria/img/DSC_0139.jpg">
-            <img class="galeria__imagen horizontal" src="../galeria/img/DSC_0177.jpg">
-            <img class="galeria__imagen horizontal" src="../galeria/img/DSC_0187.jpg">
+            <img data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="galeria__imagen horizontal" src="../galeria/img/DSC_0042.jpg">
+            <img data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="galeria__imagen vertical" src="../galeria/img/DSC_0030.jpg">
+            <img data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="galeria__imagen horizontal" src="../galeria/img/DSC_0266.jpg">
+            <img data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="galeria__imagen vertical" src="../galeria/img/DSC_0114.jpg">
+            <img data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="galeria__imagen horizontal" src="../galeria/img/DSC_0060.jpg">
+            <img data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="galeria__imagen horizontal" src="../galeria/img/DSC_0067.jpg">
+            <img data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="galeria__imagen vertical" src="../galeria/img/DSC_0071.jpg">
+            <img data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="galeria__imagen horizontal" src="../galeria/img/DSC_0091.jpg">
+            <img data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="galeria__imagen vertical" src="../galeria/img/DSC_0121.jpg">
+            <img data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="galeria__imagen horizontal" src="../galeria/img/DSC_0139.jpg">
+            <img data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="galeria__imagen horizontal" src="../galeria/img/DSC_0177.jpg">
+            <img data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="galeria__imagen horizontal" src="../galeria/img/DSC_0187.jpg">
         </div>
     </section>
     <footer class="footLeft footer__container onlyDesktop">
@@ -76,7 +77,11 @@
             </div>
         </div>
     </footer>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>
