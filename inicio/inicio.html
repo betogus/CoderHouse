@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +12,8 @@
     <script src="https://kit.fontawesome.com/5406b95b28.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Patrick+Hand">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
     <title>Jam Glass - Inicio</title>
 </head>
 
@@ -18,60 +22,57 @@
         <div class="onlyDevice menu">
             <i class="fa-solid fa-bars onlyDevice"></i>
         </div>
-        <nav class="header__container">
-            <ul>
-                <li><a class="header__item" href="#inicio">Inicio</a></li>
-                <li><a class="header__item" href="../galeria/galeria.html">Galería</a></li>
-                <li><a class="header__item" href="../shows/shows.html">Shows</a></li>
-                <li><a class="header__item" href="../discografia/discografia.html">Discografía</a></li>
-                <li><a class="header__item" href="../videos/videos.html">Videos</a></li>
-                <li><a class="header__item" href="../sobreNosotros/sobreNosotros.html">Sobre Nosotros</a></li>
-                <li><a class="header__item" href="../suscribirme/suscribirme.html">Suscribirme</a></li>
+        <nav class="header__container fixed-top">
+            <ul class="nav justify-content-end">
+                <li class="nav-item "><a class="header__item nav-link" href="#inicio">Inicio</a></li>
+                <li class="nav-item"><a class="header__item nav-link" href="../galeria/galeria.html">Galería</a></li>
+                <li class="nav-item"><a class="header__item nav-link" href="../shows/shows.html">Shows</a></li>
+                <li class="nav-item"><a class="header__item nav-link" href="../discografia/discografia.html">Discografía</a></li>
+                <li class="nav-item"><a class="header__item nav-link" href="../videos/videos.html">Videos</a></li>
+                <li class="nav-item"><a class="header__item nav-link" href="../sobreNosotros/sobreNosotros.html">Sobre Nosotros</a></li>
+                <li class="nav-item"><a class="header__item nav-link" href="../suscribirme/suscribirme.html">Suscribirme</a></li>
             </ul>
         </nav>
     </header>
     <section>
-        <section id="inicio" class="inicio-main">
-            <div class="inicio__main__presentacion">
-                <p>Nosotros somos</p>
-                <p class="inicio__main__presentacion__titulo"> - Jam Glass - </p>
+        <section id="inicio" class="inicio-main container-fluid">
+            <div class="inicio__main__presentacion text-center text-light">
+                <p class="fs-1">Nosotros somos</p>
+                <h1 class="display-1"> <i>- Jam Glass - </i></h1>
             </div>
+            
         </section>
 
-        <section class="inicio__videos" data-aos="fade-up" data-aos-duration="1000">
-            <h1>Videos</h1>
-            <div class="inicio--center">
-                <iframe width="900" height="506" src="https://www.youtube.com/embed/ZgUu-1FCvnk"
+        <section class="inicio__videos py-3" data-aos="fade-up" data-aos-duration="1000">
+            <h1 class="text-light m-4">Videos</h1>
+            <div class="inicio--center text-center">
+                <iframe class="" width="900" height="506" src="https://www.youtube.com/embed/ZgUu-1FCvnk"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
             </div>
-            <div class="seeMore">
-                <a href="../videos/videos.html">Ver más</a>
+            <div class="seeMore text-end">
+                <a class="text-decoration-none fs-3 pe-2" href="../videos/videos.html">Ver más</a>
             </div>
         </section>
-        <section class="inicio__galeria" data-aos="fade-up" data-aos-duration="1000">
-            <h1>Galería</h1>
-            <div class="inicio__galeria__container">
-                <img class="inicio__galeria__item1" data-aos="flip-left"
-                data-aos-easing="ease-out-cubic"
-                data-aos-duration="2000" src="../galeria/img/DSC_0042.jpg">
-                <img class="inicio__galeria__item2 onlyDesktop" data-aos="flip-left"
-                data-aos-easing="ease-out-cubic"
-                data-aos-duration="2000" src="../galeria/img/DSC_0091.jpg">
-                <img class="inicio__galeria__item1 onlyDesktop" data-aos="flip-left"
-                data-aos-easing="ease-out-cubic"
-                data-aos-duration="2000" src="../galeria/img/DSC_0060.jpg">
-                <img class="inicio__galeria__item2 onlyDesktop" data-aos="flip-left"
-                data-aos-easing="ease-out-cubic"
-                data-aos-duration="2000" src="../galeria/img/DSC_0067.jpg">
+        <section class="inicio__galeria container-fluid" data-aos="fade-up" data-aos-duration="1000">
+            <h1 class="text-light m-4">Galería</h1>
+            <div class="inicio__galeria__container d-flex justify-content-around flex-wrap">
+                <img class="inicio__galeria__item1" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" src="../galeria/img/DSC_0042.jpg">
+                <img class="inicio__galeria__item2" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" src="../galeria/img/DSC_0091.jpg">
+                <img class="inicio__galeria__item1" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" src="../galeria/img/DSC_0060.jpg">
+                <img class="inicio__galeria__item2" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" src="../galeria/img/DSC_0067.jpg">
             </div>
-            <div class="seeMore">
-                <a href="../galeria/galeria.html">Ver más</a>
+            <div class="seeMore text-end">
+                <a class="text-decoration-none fs-3 pe-2" href="../galeria/galeria.html">Ver más</a>
             </div>
         </section>
         <section class="inicio__shows" data-aos="fade-up" data-aos-duration="1000">
-            <h1>Shows</h1>
+            <h1 class="text-light m-4">Shows</h1>
             <table>
                 <tr class="inicio__shows__fecha">
                     <th class="inicio__shows__fecha--left">
@@ -82,14 +83,14 @@
                     </th>
                 </tr>
             </table>
-            <div class="seeMore">
-                <a href="../shows/shows.html">Ver más</a>
+            <div class="seeMore text-end">
+                <a class="text-decoration-none fs-3 pe-2" href="../shows/shows.html">Ver más</a>
             </div>
         </section>
-        <section class="inicio__sobreNosotros" data-aos="fade-up" data-aos-duration="1000">
-            <h1>Sobre Nosotros</h1>
-            <div class="inicio__sobreNosotros__container">
-                <p class="inicio__sobreNosotros__item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
+        <section class="inicio__sobreNosotros container-fluid" data-aos="fade-up" data-aos-duration="1000">
+            <h1 class="text-light m-4">Sobre Nosotros</h1>
+            <div class="inicio__sobreNosotros__container row">
+                <p class="inicio__sobreNosotros__item col-md-6 text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
                     illum ab rem libero aliquid necessitatibus fugiat, veniam, non facere quae quisquam consequuntur eum
                     qui
                     tenetur tempore aut a illo deleniti! Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -134,16 +135,16 @@
                     ab omnis praesentium eveniet beatae perspiciatis porro quod dolore exercitationem, officiis id
                     quidem!
                 </p>
-                <img class="inicio__sobreNosotros__item onlyDesktop" src="../galeria/img/DSC_0187.jpg"></a>
+                <img class="inicio__sobreNosotros__item onlyDesktop col-md-6" src="../galeria/img/DSC_0187.jpg"></a>
             </div><br>
-            <div class="seeMore">
-                <a class="seeMore__a" href="../sobreNosotros/sobreNosotros.html">Ver más</a>
+            <div class="seeMore text-end">
+                <a class="seeMore__a text-decoration-none fs-3 pe-2" href="../sobreNosotros/sobreNosotros.html">Ver más</a>
             </div>
         </section>
-        <section class="inicio__suscribirme"data-aos="zoom-out" data-aos-duration="1000">
-            <h1>Suscribirme</h1>
-            <h2 class="inicio__suscribirme--center">Entérate de las novedades de <br>Jam Glass</h2>
-            <div class="inicio__suscribirme--center">
+        <section class="inicio__suscribirme" data-aos="zoom-out" data-aos-duration="1000">
+            <h1 class="text-light m-4">Suscribirme</h1>
+            <h2 class="inicio__suscribirme--center text-center py-2 text-light">Entérate de las novedades de <br>Jam Glass</h2>
+            <div class="inicio__suscribirme--center text-center py-4">
                 <a class="inicio__suscribirme__button" href="../suscribirme/suscribirme.html">Suscribirme</a>
             </div>
         </section>
@@ -180,9 +181,10 @@
     </footer>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
