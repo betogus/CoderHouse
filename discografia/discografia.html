@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +12,9 @@
     <script src="https://kit.fontawesome.com/5406b95b28.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Patrick+Hand">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <title>Jam Glass - Discografía</title>
+    <!-- Bootstrap CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <title>Jam Glass - Shows</title>
 </head>
 
 <body>
@@ -18,50 +22,57 @@
         <div class="onlyDevice menu">
             <i class="fa-solid fa-bars onlyDevice"></i>
         </div>
-        <nav class="header__container">
-            <ul>
-                <li><a class="header__item" href="../inicio/inicio.html">Inicio</a></li>
-                <li><a class="header__item" href="../galeria/galeria.html">Galería</a></li>
-                <li><a class="header__item" href="../shows/shows.html">Shows</a></li>
-                <li><a class="header__item" href="#discografia">Discografía</a></li>
-                <li><a class="header__item" href="../videos/videos.html">Videos</a></li>
-                <li><a class="header__item" href="../sobreNosotros/sobreNosotros.html">Sobre Nosotros</a></li>
-                <li><a class="header__item" href="../suscribirme/suscribirme.html">Suscribirme</a></li>
+        <nav class="header__container fixed-top">
+            <ul class="nav justify-content-end">
+                <li class="nav-item "><a class="header__item nav-link" href="../inicio/inicio.html">Inicio</a></li>
+                <li class="nav-item"><a class="header__item nav-link" href="../galeria/galeria.html">Galería</a></li>
+                <li class="nav-item"><a class="header__item nav-link" href="../shows/shows.html">Shows</a></li>
+                <li class="nav-item"><a class="header__item nav-link" href="#discografia">Discografía</a></li>
+                <li class="nav-item"><a class="header__item nav-link" href="../videos/videos.html">Videos</a></li>
+                <li class="nav-item"><a class="header__item nav-link" href="../sobreNosotros/sobreNosotros.html">Sobre
+                        Nosotros</a></li>
+                <li class="nav-item"><a class="header__item nav-link"
+                        href="../suscribirme/suscribirme.html">Suscribirme</a></li>
             </ul>
         </nav>
     </header>
     <section id="discografia" class="discografia" data-aos="fade-up" data-aos-duration="1000">
-        <h1>Discografía</h1>
-        <div class="discografia__container">
-            <div class="discografia__item">
-                <img src="../galeria/img/DSC_0067.jpg">
-            </div>
-            <div class="discografia__item">
-                <ul class="discografia__temas" style="height:500px">
-                    <li>I Feel Good<br><audio controls>
-                            <source src="../discografia/Audio/002 I feel good.mp3" type="audio/wav"></audio></li>
-                    <li>Staying Alive<br><audio controls>
-                            <source src="../discografia/Audio/004 staying alive.mp3" type="audio/wav"></audio></li>
-                    <li>Crazy<br><audio controls>
-                            <source src="../discografia/Audio/006 Crazy.mp3" type="audio/wav"></audio></li>
-                </ul>
+        <h1 class="text-light m-4">Discografía</h1>
+        <div class="discografia__container container">
+            <div class="row">
+                <figure class="discografia__item figure col-md-6">
+                    <img class="figure-img img-fluid" src="../galeria/img/DSC_0067.jpg">
+                </figure>
+                <div class="discografia__item col-md-6">
+                    <ul class="discografia__temas text-light" style="height:500px">
+                        <li>I Feel Good<br><audio controls>
+                                <source src="../discografia/Audio/002 I feel good.mp3" type="audio/wav"></audio></li>
+                        <li>Staying Alive<br><audio controls>
+                                <source src="../discografia/Audio/004 staying alive.mp3" type="audio/wav"></audio></li>
+                        <li>Crazy<br><audio controls>
+                                <source src="../discografia/Audio/006 Crazy.mp3" type="audio/wav"></audio></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
-    <footer class="footLeft footer__container onlyDesktop">
+    <footer
+        class="footLeft footer__container onlyDesktop d-flex justify-content-between align-items-center container-fluid">
         <div class="footer__item--left">
-            <i class="fab fa-instagram footer-item-icon"></i>
-            <i class="fab fa-facebook footer-item-icon"></i>
-            <i class="fab fa-youtube footer-item-icon"></i>
+            <a href=""><i class="fab fa-instagram footer-item-icon px-3"></i></a>
+            <a href=""><i class="fab fa-facebook footer-item-icon px-3"></i></a>
+            <a href=""><i class="fab fa-youtube footer-item-icon px-3"></i></a>
         </div>
     </footer>
-    <footer class="footCenter footer__container onlyDesktop">
+    <footer
+        class="footCenter footer__container onlyDesktop d-flex justify-content-between align-items-center container-fluid">
         <div class="footer__item--center">
             <i class="far fa-envelope footer-item-icon"></i> jamglass18@gmail.com
         </div>
     </footer>
-    <footer class="footRight footer__container onlyDesktop">
-        <div class="footer__item--right">
+    <footer
+        class="footRight footer__container onlyDesktop d-flex justify-content-between align-items-center container-fluid">
+        <div class="footer__item--right container-fluid text-end pe-3">
             <a href="#discografia"><i class="fas fa-angle-double-up footer-item-icon"></i></a>
         </div>
     </footer>
@@ -78,12 +89,12 @@
             </div>
         </div>
     </footer>
-    </footer>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

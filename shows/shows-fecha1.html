@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +12,8 @@
     <script src="https://kit.fontawesome.com/5406b95b28.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Patrick+Hand">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
     <title>Jam Glass - Shows</title>
 </head>
 
@@ -18,26 +22,29 @@
         <div class="onlyDevice menu">
             <i class="fa-solid fa-bars onlyDevice"></i>
         </div>
-        <nav class="header__container">
-            <ul>
-                <li><a class="header__item" href="../inicio/inicio.html">Inicio</a></li>
-                <li><a class="header__item" href="../galeria/galeria.html">Galería</a></li>
-                <li><a class="header__item" href="../shows/shows.html">Shows</a></li>
-                <li><a class="header__item" href="../discografia/discografia.html">Discografía</a></li>
-                <li><a class="header__item" href="../videos/videos.html">Videos</a></li>
-                <li><a class="header__item" href="../sobreNosotros/sobreNosotros.html">Sobre Nosotros</a></li>
-                <li><a class="header__item" href="../suscribirme/suscribirme.html">Suscribirme</a></li>
+        <nav class="header__container fixed-top">
+            <ul class="nav justify-content-end">
+                <li class="nav-item "><a class="header__item nav-link" href="../inicio/inicio.html">Inicio</a></li>
+                <li class="nav-item"><a class="header__item nav-link" href="../galeria/galeria.html">Galería</a></li>
+                <li class="nav-item"><a class="header__item nav-link" href="#shows-fecha1">Shows</a></li>
+                <li class="nav-item"><a class="header__item nav-link"
+                        href="../discografia/discografia.html">Discografía</a></li>
+                <li class="nav-item"><a class="header__item nav-link" href="../videos/videos.html">Videos</a></li>
+                <li class="nav-item"><a class="header__item nav-link" href="../sobreNosotros/sobreNosotros.html">Sobre
+                        Nosotros</a></li>
+                <li class="nav-item"><a class="header__item nav-link"
+                        href="../suscribirme/suscribirme.html">Suscribirme</a></li>
             </ul>
         </nav>
     </header>
     <section id="shows-fecha1" class="shows">
-        <h1 data-aos="fade-up" data-aos-duration="1000">Shows</h1>
-        <div class="shows__flyer" data-aos="fade-up" data-aos-duration="1000">
-            <img src="../shows/Imagenes/fecha1.jpg">
+        <h1 data-aos="fade-up" data-aos-duration="1000" class="text-light m-4">Shows</h1>
+        <div class="shows__flyer text-center container-fluid" data-aos="fade-up" data-aos-duration="1000">
+            <img class="img-fluid" src="../shows/Imagenes/fecha1.jpg">
         </div>
-        <div class="shows__item" data-aos="fade-up" data-aos-duration="1000">
+        <div class="shows__item py-5 px-4 text-light text-center" data-aos="fade-up" data-aos-duration="1000">
             <h2>Descripción</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, quos at fugit quam cumque assumenda
+            <p class=" fs-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, quos at fugit quam cumque assumenda
                 similique voluptatibus cupiditate non suscipit voluptate ullam, libero aperiam optio quas illum
                 perspiciatis, vitae rem. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus quisquam
                 minima sunt corrupti doloribus? Corporis dolorem saepe corrupti qui impedit tenetur aliquid eligendi.
@@ -55,31 +62,34 @@
                 obcaecati asperiores vitae ad exercitationem, a iure sequi, hic architecto omnis at commodi expedita
                 optio laudantium ipsum?</p>
         </div>
-        <div class="shows__item" data-aos="fade-up" data-aos-duration="1000">
+        <div class="shows__item py-5 px-4 text-light text-center" data-aos="fade-up" data-aos-duration="1000">
             <h2>Ubicación</h2>
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3403.658627487172!2d-64.17813038551837!3d-31.451063681392565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a2e1a2085a6b%3A0x24e9f1b1ab4ffd55!2sJohnny%20B.%20Good%20Barrio%20Jard%C3%ADn!5e0!3m2!1sen!2sar!4v1647093222671!5m2!1sen!2sar"
                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
-        <div class="shows__item" data-aos="fade-up" data-aos-duration="1000">
+        <div class="shows__item py-5 px-4 text-center" data-aos="fade-up" data-aos-duration="1000">
             <img
                 src="https://lh5.googleusercontent.com/p/AF1QipOFpM8QelCfItunI-yot-4LNxfVWbsl-OPqnb1F=w825-h441-p-k-no">
         </div>
     </section>
-    <footer class="footLeft footer__container onlyDesktop">
+    <footer
+        class="footLeft footer__container onlyDesktop d-flex justify-content-between align-items-center container-fluid">
         <div class="footer__item--left">
-            <i class="fab fa-instagram footer-item-icon"></i>
-            <i class="fab fa-facebook footer-item-icon"></i>
-            <i class="fab fa-youtube footer-item-icon"></i>
+            <a href=""><i class="fab fa-instagram footer-item-icon px-3"></i></a>
+            <a href=""><i class="fab fa-facebook footer-item-icon px-3"></i></a>
+            <a href=""><i class="fab fa-youtube footer-item-icon px-3"></i></a>
         </div>
     </footer>
-    <footer class="footCenter footer__container onlyDesktop">
+    <footer
+        class="footCenter footer__container onlyDesktop d-flex justify-content-between align-items-center container-fluid">
         <div class="footer__item--center">
             <i class="far fa-envelope footer-item-icon"></i> jamglass18@gmail.com
         </div>
     </footer>
-    <footer class="footRight footer__container onlyDesktop">
-        <div class="footer__item--right">
+    <footer
+        class="footRight footer__container onlyDesktop d-flex justify-content-between align-items-center container-fluid">
+        <div class="footer__item--right container-fluid text-end pe-3">
             <a href="#shows-fecha1"><i class="fas fa-angle-double-up footer-item-icon"></i></a>
         </div>
     </footer>
@@ -98,9 +108,10 @@
     </footer>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
