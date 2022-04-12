@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +12,8 @@
     <script src="https://kit.fontawesome.com/5406b95b28.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Patrick+Hand">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
     <title>Jam Glass - Sobre Nosotros</title>
 </head>
 
@@ -18,27 +22,32 @@
         <div class="onlyDevice menu">
             <i class="fa-solid fa-bars onlyDevice"></i>
         </div>
-        <nav class="header__container">
-            <ul>
-                <li><a class="header__item" href="../inicio/inicio.html">Inicio</a></li>
-                <li><a class="header__item" href="../galeria/galeria.html">Galería</a></li>
-                <li><a class="header__item" href="../shows/shows.html">Shows</a></li>
-                <li><a class="header__item" href="../discografia/discografia.html">Discografía</a></li>
-                <li><a class="header__item" href="../videos/videos.html">Videos</a></li>
-                <li><a class="header__item" href="#sobreNosotros">Sobre Nosotros</a></li>
-                <li><a class="header__item" href="../suscribirme/suscribirme.html">Suscribirme</a></li>
+        <nav class="header__container fixed-top">
+            <ul class="nav justify-content-end">
+                <li class="nav-item "><a class="header__item nav-link" href="../inicio/inicio.html">Inicio</a></li>
+                <li class="nav-item"><a class="header__item nav-link" href="../galeria/galeria.html">Galería</a></li>
+                <li class="nav-item"><a class="header__item nav-link" href="../shows/shows.html">Shows</a></li>
+                <li class="nav-item"><a class="header__item nav-link"
+                        href="../discografia/discografia.html">Discografía</a></li>
+                <li class="nav-item"><a class="header__item nav-link" href="../videos/videos.html">Videos</a></li>
+                <li class="nav-item"><a class="header__item nav-link" href="#sobreNosotros">Sobre
+                        Nosotros</a></li>
+                <li class="nav-item"><a class="header__item nav-link"
+                        href="../suscribirme/suscribirme.html">Suscribirme</a></li>
             </ul>
         </nav>
     </header>
     <section id="sobreNosotros" class="sobreNosotros">
-        <h1 data-aos="fade-up" data-aos-duration="1000">Sobre Nosotros</h1>
-        <div class="sobreNosotros__quienesSomos">
-            <div>
-                <img class="sobreNosotros__beto onlyDesktop" data-aos="fade-right" data-aos-duration="1000" src="../galeria/img/DSC_0030.jpg">
+        <h1 data-aos="fade-up" data-aos-duration="1000" class="text-light m-4">Sobre Nosotros</h1>
+        <div class="sobreNosotros__quienesSomos row text-center">
+            <div class="col-md-4">
+                <img class="sobreNosotros__beto onlyDesktop" data-aos="fade-right" data-aos-duration="1000"
+                    src="../galeria/img/DSC_0030.jpg">
             </div>
-            <div>
-                <h2 data-aos="fade-up" data-aos-duration="1000">Quiénes somos</h2>
-                <p data-aos="fade-up" data-aos-duration="1000">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quibusdam, eaque eos voluptas labore
+            <div class="col-md-4">
+                <h2 data-aos="fade-up" data-aos-duration="1000" class="text-light">Quiénes somos</h2>
+                <p data-aos="fade-up" data-aos-duration="1000" class="text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Vero quibusdam, eaque eos voluptas labore
                     voluptatibus! Facere, ullam! Animi sunt, odio soluta veniam voluptates esse qui atque recusandae
                     maiores corrupti? In?
                     Reiciendis sapiente laborum eveniet molestiae? Tempore quisquam nam, veniam quod quam labore id
@@ -54,14 +63,16 @@
                     laudantium, ex culpa molestias nemo architecto hic corporis consequuntur odit deleniti eligendi
                     sequi obcaecati quisquam consectetur maiores assumenda!</p>
             </div>
-            <div>
-                <img class="sobreNosotros__dario onlyDesktop" data-aos="fade-left" data-aos-duration="1000" src="../galeria/img/DSC_0071.jpg">
+            <div class="col-md-4">
+                <img class="sobreNosotros__dario onlyDesktop" data-aos="fade-left" data-aos-duration="1000"
+                    src="../galeria/img/DSC_0071.jpg">
             </div>
         </div>
-        <div class="sobreNosotros__queHacemos">
-            <div>
-                <h2 data-aos="fade-up" data-aos-duration="1000">Qué hacemos</h2>
-                <p data-aos="fade-up" data-aos-duration="1000">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit, iusto nobis veritatis consectetur
+        <div class="sobreNosotros__queHacemos row">
+            <div class="col-md-6 text-light">
+                <h2 data-aos="fade-up" data-aos-duration="1000" class="m-4">Qué hacemos</h2>
+                <p data-aos="fade-up" data-aos-duration="1000" class="m-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Velit, iusto nobis veritatis consectetur
                     veniam temporibus enim fugit blanditiis praesentium rem quo impedit obcaecati dolor repellendus
                     commodi mollitia, quibusdam at. Velit.
                     Nihil sit quam a, delectus enim magni possimus quia suscipit beatae assumenda provident maxime?
@@ -71,14 +82,16 @@
                     ullam quisquam culpa obcaecati ut eius doloremque asperiores mollitia quas non officia. Labore, qui!
                 </p>
             </div>
-            <div>
-                <img class="onlyDesktop" data-aos="fade-left" data-aos-duration="1000"  src="../galeria/img/DSC_0091.jpg">
+            <div class="col-md-6">
+                <img class="onlyDesktop" data-aos="fade-left" data-aos-duration="1000"
+                    src="../galeria/img/DSC_0091.jpg">
             </div>
         </div>
-        <div class="sobreNosotros__integrantes">
+        <div class="sobreNosotros__integrantes text-center p-5 text-light">
             <div>
                 <h2 data-aos="fade-up" data-aos-duration="1000">Integrantes</h2>
-                <p data-aos="fade-up" data-aos-duration="1000">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti maxime voluptate consectetur? Quae
+                <p data-aos="fade-up" data-aos-duration="1000">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Deleniti maxime voluptate consectetur? Quae
                     consequatur deserunt cumque sequi perspiciatis qui, error, excepturi alias dolore dicta vero quo
                     aliquam, pariatur explicabo perferendis?
                     Veritatis saepe corporis nisi. Nisi voluptas natus impedit unde accusamus est voluptatum modi fugit
@@ -94,20 +107,23 @@
         </div>
     </section>
 
-    <footer class="footLeft footer__container onlyDesktop">
+    <footer
+        class="footLeft footer__container onlyDesktop d-flex justify-content-between align-items-center container-fluid">
         <div class="footer__item--left">
-            <i class="fab fa-instagram footer-item-icon"></i>
-            <i class="fab fa-facebook footer-item-icon"></i>
-            <i class="fab fa-youtube footer-item-icon"></i>
+            <a href=""><i class="fab fa-instagram footer-item-icon px-3"></i></a>
+            <a href=""><i class="fab fa-facebook footer-item-icon px-3"></i></a>
+            <a href=""><i class="fab fa-youtube footer-item-icon px-3"></i></a>
         </div>
     </footer>
-    <footer class="footCenter footer__container onlyDesktop">
+    <footer
+        class="footCenter footer__container onlyDesktop d-flex justify-content-between align-items-center container-fluid">
         <div class="footer__item--center">
             <i class="far fa-envelope footer-item-icon"></i> jamglass18@gmail.com
         </div>
     </footer>
-    <footer class="footRight footer__container onlyDesktop">
-        <div class="footer__item--right">
+    <footer
+        class="footRight footer__container onlyDesktop d-flex justify-content-between align-items-center container-fluid">
+        <div class="footer__item--right container-fluid text-end pe-3">
             <a href="#sobreNosotros"><i class="fas fa-angle-double-up footer-item-icon"></i></a>
         </div>
     </footer>
@@ -128,7 +144,8 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
-      </script>
+    </script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
