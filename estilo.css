@@ -107,11 +107,6 @@ section {
    .header__container:hover {
       height: 60px;
    }
-
-   .navbar-nav {
-      display: flex;
-      
-   }
    
    .navbar-nav a::after {
       content: "";
