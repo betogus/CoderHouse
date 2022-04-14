@@ -51,7 +51,7 @@ section {
 }
 
 
-@media only screen and (min-width: 576px) {
+@media only screen and (min-width: 1024px) {
 
    body {
       display: grid;
@@ -80,23 +80,68 @@ section {
    /* HEADER */
 
    .header__container {
-      display: flex;
-      width: 100%;
-      justify-content: end;
+      /*  display: flex; */
+      /*  width: 100%; */
+      /*  justify-content: end; */
       background: linear-gradient(to bottom, rgb(233, 188, 40), transparent);
+      font-size: 20px;
    }
 
-   .header__container ul {
-      list-style-type: none;
+   /* .header__container ul { */
+   /*    list-style-type: none; */
+   /*    display: flex; */
+   /*    gap: 1rem; */
+   /*    font-size: 25px; */
+   /*    margin-right: 20px; */
+   /* } */
+
+   /* .header__item { */
+   /*    padding: 1vw; */
+   /* } */
+
+   .header__container {
+      height: 40px;
+      transition: height 0.5s;
+   }
+
+   .header__container:hover {
+      height: 60px;
+   }
+
+   .navbar-nav {
       display: flex;
-      gap: 1rem;
-      font-size: 25px;
-      margin-right: 20px;
+      
+   }
+   
+   .navbar-nav a::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      background: #000;
+      transform-origin: right;
+      transform: scaleX(0);
+      transition: transform 0.2s ease-in-out;
    }
 
-   .header__item {
-      padding: 1vw;
+   .navbar-nav a:hover::after {
+      transform-origin: left;
+      transform: scale(1);
    }
+   
+   
+   
+   
+
+   
+   
+   
+   
+
+
 
    /* SOBRE NOSOTROS*/
 
@@ -452,7 +497,7 @@ a:any-link {
    list-style-type: none;
 } */
 
-@media only screen and (max-width:576px) {
+@media only screen and (max-width:1024px) {
    .onlyDevice {
       display: block
    }
@@ -499,20 +544,36 @@ a:any-link {
       border-radius: 0.5em;
    }
 
-   .header__container {
-      background: linear-gradient(to bottom, rgb(233, 188, 40), transparent);
+   /*    .header__container { */
+   /* background: linear-gradient(to bottom, rgb(233, 188, 40), transparent); */
+   /* position: fixed; */
+   /*z-index: 1;*/
+   /* top: 0px; */
+   /*    } */
+
+   .header__container button {
+      background: linear-gradient(to bottom, rgb(200, 154, 1), rgb(240, 213, 11));
       position: fixed;
-      z-index: 1;
-      top: 50px;
+      right: 5px;
+      top: 5px;
+   }
+
+   .navbar-nav {
+      background: linear-gradient(to bottom, rgba(200, 154, 1, 0.5) 1%, rgba(240, 213, 11, 0.5) 90%, transparent 100%);
+   }
+
+   .nav-link:hover {
+      text-decoration: underline;
+
    }
 
    h1 {
-      font-size: 50px; 
+      font-size: 50px;
       padding: 10px;
       text-align: center;
    }
 
-    h2 {
+   h2 {
       font-size: 25px;
       padding: 10px;
       text-align: center;
@@ -521,7 +582,7 @@ a:any-link {
    p {
       text-align: center;
    }
- 
+
    .inicio__main__presentacion {
       font-size: 10vw;
       background-image: none;
@@ -596,32 +657,6 @@ iframe,
    }
 }
 
-.header__container {
-   height: 40px;
-   transition: height 0.5s;
-}
-
-.header__container:hover {
-   height: 60px;
-}
-
-.header__item:before {
-   content: "";
-   position: absolute;
-   width: 100%;
-   height: 2px;
-   bottom: 0;
-   left: 0;
-   background-color: #000;
-   visibility: hidden;
-   transform: scaleX(0);
-   transition: 0.3s;
-}
-
-.header__item:hover:before {
-   visibility: visible;
-   transform: scaleX(1);
-}
 
 .shows__fecha {
    animation-duration: 1s;
