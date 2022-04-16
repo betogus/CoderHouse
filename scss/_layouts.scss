@@ -1,0 +1,181 @@
+/* --> LAYOUTS <-- */
+
+
+/* GENERAL */
+
+body {
+    background-image: url("../background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+}
+
+header {
+    grid-area: header;
+}
+
+section {
+    grid-area: main;
+}
+
+.footLeft {
+    grid-area: footLeft;
+}
+
+.footCenter {
+    grid-area: footCenter;
+}
+
+.footRight {
+    grid-area: footRight;
+}
+
+.footer__container {
+    background: $color-footer;
+}
+
+
+/* INICIO */
+
+.inicio__sobreNosotros__item {
+    overflow-y: auto;
+    max-height: 500px;
+}
+
+/* SHOWS */
+
+.shows__fecha {
+    background: $color-principal;
+    animation-duration: 1s;
+    animation-name: extenderX;
+    animation-iteration-count: 1;
+}
+
+/* SUSCRIBIRME */
+
+.suscribirme__formulario {
+
+    background: $color-principal;
+    border-radius: 2em;
+    border: 0;
+    color: #000;
+}
+
+/* GALERIA */
+
+.galeria__grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 100px);
+    grid-auto-rows: 100px;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    justify-content: center;
+    .horizontal {
+        grid-column: span 3;
+        grid-row: span 2;
+    }
+    
+    .vertical {
+        grid-row: span 3;
+        grid-column: span 2;
+    }
+
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (min-width: 1024px) {
+    body {
+        display: grid;
+        grid-template-areas:
+            "header header header"
+            "main main main"
+            "footLeft footCenter footRight";
+        grid-template-columns: auto;
+        grid-template-rows: 80px auto 100px;
+    }
+
+    .onlyDevice {
+        display: none;
+    }
+
+    .header__container {
+        background: $color-header;
+        font-size: 20px;
+        height: 40px;
+        transition: height 0.5s;
+
+        &:hover {
+            height: 60px;
+        }
+    }
+}
+
+
+
+@media only screen and (max-width:1024px) {
+    .onlyDevice {
+        display: block
+    }
+
+
+    .onlyDesktop {
+        visibility: hidden;
+        display: none;
+    }
+
+    .index__footer__container {
+        position: fixed;
+        bottom: 5px;
+
+    }
+
+    .index__footer__item {
+        display: flex;
+        width: 100vw;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .menu {
+        position: fixed;
+        top: 5px;
+        left: 5px;
+        background-color: rgb(233, 188, 40);
+        padding: 5px;
+        color: #000;
+        border-radius: 0.5em;
+    }
+
+    .navbar-nav {
+        background: $color-header-device;
+    }
+
+    .nav-link:hover {
+        text-decoration: underline;
+
+    }
+
+    .inicio__main {
+        div {
+            font-size: 10vw;
+            background-image: none;
+            height: 0px;
+            padding-top: 50px;
+            animation-duration: 3s;
+            animation-name: aparecerYPosicionarse;
+            animation-iteration-count: 1;
+        }
+    }
+
+    .inicio__sobreNosotros__item {
+        width: 100%;
+    }
+
+    .shows__item {
+        padding: 20px 0;
+    }
+}
+
