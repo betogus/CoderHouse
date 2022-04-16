@@ -111,6 +111,17 @@ section {
             height: 60px;
         }
     }
+
+    .inicio__main div {
+        font-size: 10vw;
+        background-image: none;
+        height: 0px;
+        padding-top: 50px;
+        animation-duration: 3s;
+        animation-name: aparecerYPosicionarse;
+        animation-iteration-count: 1;
+}
+
 }
 
 
@@ -158,17 +169,6 @@ section {
 
     }
 
-    .inicio__main {
-        div {
-            font-size: 10vw;
-            background-image: none;
-            height: 0px;
-            padding-top: 50px;
-            animation-duration: 3s;
-            animation-name: aparecerYPosicionarse;
-            animation-iteration-count: 1;
-        }
-    }
 
     .inicio__sobreNosotros__item {
         width: 100%;
