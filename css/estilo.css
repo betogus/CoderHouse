@@ -9,6 +9,9 @@
   text-decoration: none;
   scroll-behavior: smooth; }
 
+body {
+  overflow-x: hidden; }
+
 /* KEYFRAMES */
 @keyframes aparecerYPosicionarse {
   0% {
@@ -182,6 +185,7 @@ a:any-link {
 /* IMAGENES */
 .inicio__galeria__item1 {
   object-fit: cover;
+  object-position: center;
   width: 350px;
   height: 400px; }
 
