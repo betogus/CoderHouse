@@ -9,10 +9,10 @@
   text-decoration: none;
   scroll-behavior: smooth; }
 
-body {
+body, html {
   overflow-x: hidden;
-  max-width: 100%;
-  max-height: 100%; }
+  width: 100vw;
+  height: 100vh; }
 
 /* KEYFRAMES */
 @keyframes aparecerYPosicionarse {
@@ -305,7 +305,7 @@ iframe {
   .header__container button {
     background: linear-gradient(to bottom, #c89a01, #f0d50b);
     position: fixed;
-    right: 5px;
+    right: 5vw;
     top: 5px; }
   .inicio__main div {
     height: 200px; } }
