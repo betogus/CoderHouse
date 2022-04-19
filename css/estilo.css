@@ -9,9 +9,6 @@
   text-decoration: none;
   scroll-behavior: smooth; }
 
-body, html {
-  overflow-x: hidden; }
-
 body {
   max-width: 100vw; }
 
