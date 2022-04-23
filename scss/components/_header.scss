@@ -1,0 +1,36 @@
+@media only screen and (max-width:1024px) {
+    .header__container {
+        background: $color-header;
+        font-size: 20px;
+        height: 40px;
+        transition: height 0.5s;
+
+        &:hover {
+            height: 60px;
+        }
+    }
+    
+
+    .navbar-nav {
+        background: $color-header-device;
+    }
+
+    .nav-link:hover {
+        text-decoration: underline;
+
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .header__container {
+        background: $color-header;
+        font-size: 20px;
+        height: 40px;
+        transition: height 0.5s;
+
+        &:hover {
+            height: 60px;
+        }
+    }
+}

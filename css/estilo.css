@@ -9,47 +9,26 @@
   text-decoration: none;
   scroll-behavior: smooth; }
 
+a:any-link {
+  color: #000; }
+
+.seeMore a {
+  color: #e9bc28;
+  transition: color 0.5s; }
+  .seeMore a:hover {
+    color: #fdff00; }
+
+iframe {
+  max-width: 90%; }
+
 body {
-  max-width: 100vw; }
-
-/* KEYFRAMES */
-@keyframes aparecerYPosicionarse {
-  0% {
-    opacity: 0;
-    transform: translate(0, 20px); }
-  100% {
-    opacity: 1; } }
-
-@keyframes extenderX {
-  0% {
-    transform: scaleX(0); }
-  100% {
-    transform: scaleX(1); } }
-
-/* MEDIA QUERIES */
-@media only screen and (max-width: 1024px) {
-  h1 {
-    font-size: 50px;
-    padding: 10px;
-    text-align: center; }
-  h2 {
-    font-size: 25px;
-    padding: 10px;
-    text-align: center; }
-  p {
-    text-align: center; }
-  #sobreNosotros {
-    padding: 0 5px; } }
-
-/* --> LAYOUTS <-- */
-/* GENERAL */
-body {
-  background-image: url("../background.jpg");
+  background-image: url("../../background.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  color: #fff; }
+  color: #fff;
+  max-width: 100vw; }
 
 header {
   grid-area: header; }
@@ -66,29 +45,98 @@ section {
 .footRight {
   grid-area: footRight; }
 
+/* ICONOS */
+.fa-instagram {
+  color: #c765a8; }
+
+.fa-facebook {
+  color: #1873eb; }
+
+.fa-youtube {
+  color: #f60000; }
+
+/* KEYFRAMES */
+@keyframes aparecerYPosicionarse {
+  0% {
+    opacity: 0;
+    transform: translate(0, 20px); }
+  100% {
+    opacity: 1; } }
+
+@keyframes extenderX {
+  0% {
+    transform: scaleX(0); }
+  100% {
+    transform: scaleX(1); } }
+
+/* MEDIA QUERIES */
+@media only screen and (min-width: 1024px) {
+  body {
+    display: grid;
+    grid-template-areas: "header header header" "main main main" "footLeft footCenter footRight";
+    grid-template-columns: auto;
+    grid-template-rows: 80px auto 100px; }
+  .onlyDevice {
+    display: none; } }
+
+@media only screen and (max-width: 1024px) {
+  h1 {
+    font-size: 50px;
+    padding: 10px;
+    text-align: center; }
+  h2 {
+    font-size: 25px;
+    padding: 10px;
+    text-align: center; }
+  p {
+    text-align: center; }
+  .onlyDevice {
+    display: block; }
+  .onlyDesktop {
+    visibility: hidden;
+    display: none; } }
+
+@media only screen and (max-width: 1024px) {
+  .header__container {
+    background: linear-gradient(to bottom, #e9bc28, transparent);
+    font-size: 20px;
+    height: 40px;
+    transition: height 0.5s; }
+    .header__container:hover {
+      height: 60px; }
+  .navbar-nav {
+    background: linear-gradient(to bottom, rgba(200, 154, 1, 0.5) 1%, rgba(240, 213, 11, 0.5) 90%, transparent 100%); }
+  .nav-link:hover {
+    text-decoration: underline; } }
+
+@media only screen and (min-width: 1024px) {
+  .header__container {
+    background: linear-gradient(to bottom, #e9bc28, transparent);
+    font-size: 20px;
+    height: 40px;
+    transition: height 0.5s; }
+    .header__container:hover {
+      height: 60px; } }
+
 .footer__container {
   background: rgba(145, 145, 145, 0.5); }
 
-/* INICIO */
-.inicio__sobreNosotros__item {
-  overflow-y: auto;
-  max-height: 500px; }
+.footer-item-icon {
+  font-size: 30px; }
 
-/* SHOWS */
-.shows__fecha {
-  background: linear-gradient(to bottom, #e9bc28, #e8f40b);
-  animation-duration: 1s;
-  animation-name: extenderX;
-  animation-iteration-count: 1; }
+@media only screen and (max-width: 1024px) {
+  .index__footer__container {
+    position: fixed;
+    bottom: 5px; }
+  .index__footer__item {
+    display: flex;
+    width: 100vw;
+    justify-content: space-around;
+    align-items: center; } }
 
-/* SUSCRIBIRME */
-.suscribirme__formulario {
-  background: linear-gradient(to bottom, #e9bc28, #e8f40b);
-  border-radius: 2em;
-  border: 0;
-  color: #000; }
+#discografia {
+  margin-bottom: 300px; }
 
-/* GALERIA */
 .galeria__grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, 100px);
@@ -102,91 +150,31 @@ section {
   .galeria__grid-container .vertical {
     grid-row: span 3;
     grid-column: span 2; }
+  .galeria__grid-container img {
+    max-width: 300px;
+    max-height: 300px;
+    object-fit: cover; }
 
-/* DISCOGRAFIA */
-#discografia {
-  margin-bottom: 300px; }
+.index__button {
+  border-radius: 2em;
+  padding: 10px;
+  color: #000;
+  text-decoration: none;
+  font-weight: bolder;
+  cursor: pointer;
+  background-image: linear-gradient(to right, #d0ab45, #f3d406, #fdff00);
+  background-size: 500%;
+  background-position: left;
+  transition: background-position 0.5s; }
+  .index__button:hover {
+    background-position: right; }
 
-/* MEDIA QUERIES */
-@media only screen and (min-width: 1024px) {
-  body {
-    display: grid;
-    grid-template-areas: "header header header" "main main main" "footLeft footCenter footRight";
-    grid-template-columns: auto;
-    grid-template-rows: 80px auto 100px; }
-  .onlyDevice {
-    display: none; }
-  .header__container {
-    background: linear-gradient(to bottom, #e9bc28, transparent);
-    font-size: 20px;
-    height: 40px;
-    transition: height 0.5s; }
-    .header__container:hover {
-      height: 60px; }
-  .inicio__main div {
-    font-size: 10vw;
-    background-image: none;
-    height: 0px;
-    padding-top: 50px;
-    animation-duration: 3s;
-    animation-name: aparecerYPosicionarse;
-    animation-iteration-count: 1; } }
+.index--background {
+  background-image: url("../../galeria/img/DSC_0177.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
 
-@media only screen and (max-width: 1024px) {
-  .onlyDevice {
-    display: block; }
-  .onlyDesktop {
-    visibility: hidden;
-    display: none; }
-  .index__footer__container {
-    position: fixed;
-    bottom: 5px; }
-  .index__footer__item {
-    display: flex;
-    width: 100vw;
-    justify-content: space-around;
-    align-items: center; }
-  .menu {
-    position: fixed;
-    top: 5px;
-    left: 5px;
-    background-color: #e9bc28;
-    padding: 5px;
-    color: #000;
-    border-radius: 0.5em; }
-  .navbar-nav {
-    background: linear-gradient(to bottom, rgba(200, 154, 1, 0.5) 1%, rgba(240, 213, 11, 0.5) 90%, transparent 100%); }
-  .nav-link:hover {
-    text-decoration: underline; }
-  .inicio__sobreNosotros__item {
-    width: 100%; }
-  .shows__item {
-    padding: 20px 0; } }
-
-/* --> COMPONENTS <-- */
-/* ICONOS */
-.fa-instagram {
-  color: #c765a8; }
-
-.fa-facebook {
-  color: #1873eb; }
-
-.fa-youtube {
-  color: #f60000; }
-
-.footer-item-icon {
-  font-size: 30px; }
-
-a:any-link {
-  color: #000; }
-
-.seeMore a {
-  color: #e9bc28;
-  transition: color 0.5s; }
-  .seeMore a:hover {
-    color: #fdff00; }
-
-/* IMAGENES */
 .inicio__galeria__item1 {
   object-fit: cover;
   object-position: center;
@@ -199,19 +187,6 @@ a:any-link {
   height: 400px;
   margin-top: -50px; }
 
-.shows__item p,
-.shows__item img {
-  max-width: 100%; }
-
-.shows__flyer img {
-  max-width: 100%; }
-
-.galeria__grid-container img {
-  max-width: 300px;
-  max-height: 300px;
-  object-fit: cover; }
-
-/* TABLAS */
 .inicio__shows table {
   margin: auto;
   background: linear-gradient(to bottom, #e9bc28, #e8f40b);
@@ -231,7 +206,6 @@ a:any-link {
   min-width: 240px;
   padding: 20px; }
 
-/* BOTONES */
 .inicio__suscribirme__button {
   font-size: 20px;
   border-radius: 2em;
@@ -246,30 +220,69 @@ a:any-link {
   .inicio__suscribirme__button:hover {
     background-position: right; }
 
-.index__button {
+.inicio__sobreNosotros__item {
+  overflow-y: auto;
+  max-height: 500px; }
+
+@media only screen and (min-width: 1024px) {
+  .inicio__main div {
+    padding: 250px 0;
+    background-image: url("../../galeria/img/DSC_0139.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 1000px;
+    font-size: 10vw;
+    animation-duration: 3s;
+    animation-name: aparecerYPosicionarse;
+    animation-iteration-count: 1; } }
+
+@media only screen and (max-width: 1024px) {
+  .inicio__main div {
+    background-image: none;
+    height: 200px;
+    padding-top: 50px; }
+  .inicio__sobreNosotros__item {
+    width: 100%; } }
+
+.shows__item p,
+.shows__item img {
+  max-width: 100%; }
+
+.shows__flyer img {
+  max-width: 100%; }
+
+.shows__fecha {
+  background: linear-gradient(to bottom, #e9bc28, #e8f40b);
+  animation-duration: 1s;
+  animation-name: extenderX;
+  animation-iteration-count: 1; }
+
+@media only screen and (max-width: 1024px) {
+  .shows__item {
+    padding: 20px 0; } }
+
+@media only screen and (min-width: 1024px) {
+  .sobreNosotros__beto {
+    max-width: 90%;
+    margin-top: 200px;
+    z-index: -1; }
+  .sobreNosotros__dario {
+    max-width: 90%; }
+  .sobreNosotros__queHacemos div img {
+    max-width: 90%; }
+  .sobreNosotros__integrantes div img {
+    max-width: 80%; } }
+
+@media only screen and (max-width: 1024px) {
+  #sobreNosotros {
+    padding: 0 5px; } }
+
+.suscribirme__formulario {
+  background: linear-gradient(to bottom, #e9bc28, #e8f40b);
   border-radius: 2em;
-  padding: 10px;
-  color: #000;
-  text-decoration: none;
-  font-weight: bolder;
-  cursor: pointer;
-  background-image: linear-gradient(to right, #d0ab45, #f3d406, #fdff00);
-  background-size: 500%;
-  background-position: left;
-  transition: background-position 0.5s; }
-  .index__button:hover {
-    background-position: right; }
-
-/* BACKGROUND */
-.index--background {
-  background-image: url("../galeria/img/DSC_0177.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; }
-
-/* VIDEOS */
-iframe {
-  max-width: 90%; }
+  border: 0;
+  color: #000; }
 
 .videos__container {
   display: flex;
@@ -282,32 +295,3 @@ iframe {
     animation-iteration-count: 1; }
     .videos__container iframe:hover {
       transform: scale(1.3); }
-
-/* MEDIA QUERIES */
-@media only screen and (min-width: 1024px) {
-  .sobreNosotros__beto {
-    max-width: 90%;
-    margin-top: 200px;
-    z-index: -1; }
-  .sobreNosotros__dario {
-    max-width: 90%; }
-  .sobreNosotros__queHacemos div img {
-    max-width: 90%; }
-  .sobreNosotros__integrantes div img {
-    max-width: 80%; }
-  .inicio__main div {
-    padding: 250px 0;
-    background-image: url("../galeria/img/DSC_0139.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    height: 1000px; } }
-
-@media only screen and (max-width: 1024px) {
-  .header__container button {
-    background: linear-gradient(to bottom, #c89a01, #f0d50b);
-    position: fixed;
-    right: 5vw;
-    top: 5px; }
-  .inicio__main div {
-    height: 200px; } }

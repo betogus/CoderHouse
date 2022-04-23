@@ -1,0 +1,91 @@
+.inicio__galeria__item1 {
+    object-fit: cover;
+    object-position: center;
+    width: 350px;
+    height: 400px;
+}
+
+.inicio__galeria__item2 {
+    object-fit: cover;
+    width: 350px;
+    height: 400px;
+    margin-top: -50px;
+}
+
+.inicio__shows table {
+    margin: auto;
+    background: linear-gradient(to bottom, rgb(233, 188, 40), rgb(232, 244, 11));
+    color: #000;
+}
+
+.inicio__shows__fecha {
+    width: 300px;
+    height: 100px;
+}
+
+.inicio__shows__fecha--left {
+    font-size: 30px;
+    padding: 0 20px;
+    max-width: 60px;
+}
+
+.inicio__shows__fecha--right {
+    font-size: 30px;
+    min-width: 240px;
+    padding: 20px;
+}
+
+.inicio__suscribirme__button {
+    font-size: 20px;
+    border-radius: 2em;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    background-image: linear-gradient(to right, rgba(208, 171, 69, 1), rgba(243, 212, 6, 1), rgba(253, 255, 0, 1));
+    background-size: 500%;
+    background-position: left;
+    transition: background-position 0.5s;
+
+    &:hover {
+        background-position: right;
+    }
+}
+
+.inicio__sobreNosotros__item {
+    overflow-y: auto;
+    max-height: 500px;
+}
+
+
+@media only screen and (min-width:1024px) {
+    .inicio__main {
+        div {
+            padding: 250px 0;
+            background-image: url("../../galeria/img/DSC_0139.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            height: 1000px;
+            font-size: 10vw;
+            animation-duration: 3s;
+            animation-name: aparecerYPosicionarse;
+            animation-iteration-count: 1;
+        }
+
+    }
+}
+
+@media only screen and (max-width:1024px) {
+    .inicio__main div {
+        background-image: none;
+        height: 200px;
+        padding-top: 50px;
+    }
+
+    .inicio__sobreNosotros__item {
+        width: 100%;
+    }
+
+
+}

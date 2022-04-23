@@ -1,0 +1,22 @@
+.footer__container {
+    background: $color-footer;
+}
+.footer-item-icon {
+    font-size: 30px;
+}
+
+@media only screen and (max-width:1024px) {
+
+    .index__footer__container {
+        position: fixed;
+        bottom: 5px;
+
+    }
+
+    .index__footer__item {
+        display: flex;
+        width: 100vw;
+        justify-content: space-around;
+        align-items: center;
+    }
+}

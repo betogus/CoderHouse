@@ -1,0 +1,24 @@
+.shows__item {
+
+    p,
+    img {
+        max-width: 100%;
+    }
+}
+
+.shows__flyer img {
+    max-width: 100%;
+}
+
+.shows__fecha {
+    background: $color-principal;
+    animation-duration: 1s;
+    animation-name: extenderX;
+    animation-iteration-count: 1;
+}
+
+@media only screen and (max-width:1024px) {
+    .shows__item {
+        padding: 20px 0;
+    }
+}

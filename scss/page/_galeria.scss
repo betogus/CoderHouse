@@ -1,0 +1,23 @@
+.galeria__grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 100px);
+    grid-auto-rows: 100px;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    justify-content: center;
+    .horizontal {
+        grid-column: span 3;
+        grid-row: span 2;
+    }
+    
+    .vertical {
+        grid-row: span 3;
+        grid-column: span 2;
+    }
+    img {
+        max-width: 300px;
+        max-height: 300px;
+        object-fit: cover;
+    }
+
+}

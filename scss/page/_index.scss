@@ -1,0 +1,24 @@
+.index__button {
+    border-radius: 2em;
+    padding: 10px;
+    color: #000;
+    text-decoration: none;
+    font-weight: bolder;
+    cursor: pointer;
+    background-image: $color-button-index;
+    background-size: 500%;
+    background-position: left;
+    transition: background-position 0.5s;
+
+    &:hover {
+        background-position: right;
+    }
+}
+
+.index--background {
+    background-image: url("../../galeria/img/DSC_0177.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+

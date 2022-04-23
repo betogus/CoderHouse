@@ -1,4 +1,13 @@
-@import "vars";
-@import "base";
-@import "layouts";
-@import "components";
+@import "variables";
+@import "components/base";
+@import "components/header";
+@import "components/footer";
+@import "page/discografia";
+@import "page/galeria";
+@import "page/index";
+@import "page/inicio";
+@import "page/shows";
+@import "page/sobreNosotros";
+@import "page/suscribirse";
+@import "page/videos";
+
