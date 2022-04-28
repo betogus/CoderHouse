@@ -1,24 +1,35 @@
-.shows__item {
-
-    p,
-    img {
-        max-width: 100%;
+/* SHOWS */
+body {
+    main {
+        .shows__fecha {
+            background: map-get($colores, color-principal);
+            animation-duration: 1s;
+            animation-name: extenderX;
+            animation-iteration-count: 1;
+        }
     }
 }
 
-.shows__flyer img {
-    max-width: 100%;
-}
+/* SHOWS-FECHA 1 */
 
-.shows__fecha {
-    background: $color-principal;
-    animation-duration: 1s;
-    animation-name: extenderX;
-    animation-iteration-count: 1;
-}
+body {
+    main {
+        .shows__flyer {
+            img {
+                max-width: 100%;
+            }
+        }
 
-@media only screen and (max-width:1024px) {
-    .shows__item {
-        padding: 20px 0;
+        .shows__item {
+
+            p,
+            img {
+                max-width: 100%;
+            }
+
+            @media only screen and (max-width:1024px) {
+                padding: 20px 0;
+            }
+        }
     }
 }

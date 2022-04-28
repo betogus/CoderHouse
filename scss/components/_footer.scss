@@ -1,22 +1,29 @@
-.footer__container {
-    background: $color-footer;
-}
-.footer-item-icon {
-    font-size: 30px;
-}
-
-@media only screen and (max-width:1024px) {
-
-    .index__footer__container {
+footer.index__footer__container {
+    @media only screen and (max-width:1024px) {
         position: fixed;
         bottom: 5px;
-
     }
 
     .index__footer__item {
-        display: flex;
-        width: 100vw;
-        justify-content: space-around;
-        align-items: center;
+        @media only screen and (max-width:1024px) {
+            display: flex;
+            width: 100vw;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .footer-item-icon {
+            font-size: 30px;
+        }
     }
+}
+
+footer.footer__container {
+    background: map-get($colores, color-footer);
+
+    div {
+        .footer-item-icon {
+            font-size: 30px;
+        }
+    }
+
 }

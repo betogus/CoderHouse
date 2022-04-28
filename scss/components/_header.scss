@@ -1,36 +1,43 @@
-@media only screen and (max-width:1024px) {
-    .header__container {
-        background: $color-header;
-        font-size: 20px;
-        height: 40px;
-        transition: height 0.5s;
+body {
+    header {
+        nav {
+            .header__container {
+                @media only screen and (max-width:1024px) {
+                    background:map-get($colores, color-header-device);
+                    font-size: 20px;
+                    height: 50px;
+                    transition: height 0.5s;
 
-        &:hover {
-            height: 60px;
-        }
-    }
-    
+                    &:hover {
+                        height: 60px;
+                    }
+                }
 
-    .navbar-nav {
-        background: $color-header-device;
-    }
+                @media only screen and (min-width: 1024px) {
+                    background: map-get($colores, color-header);
+                    font-size: 20px;
+                    height: 40px;
+                    transition: height 0.5s;
 
-    .nav-link:hover {
-        text-decoration: underline;
+                    &:hover {
+                        height: 60px;
+                    }
+                }
 
-    }
-}
+                div {
+                    .navbar-nav {
+                        @media only screen and (max-width:1024px) {
+                            background: map-get($colores, color-header-device);
+                        }
 
-@media only screen and (min-width: 1024px) {
-
-    .header__container {
-        background: $color-header;
-        font-size: 20px;
-        height: 40px;
-        transition: height 0.5s;
-
-        &:hover {
-            height: 60px;
+                        .nav-link:hover {
+                            @media only screen and (max-width:1024px) {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

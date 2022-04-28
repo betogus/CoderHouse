@@ -1,6 +1,3 @@
-/* --> BASE <-- */
-
-
 /* GENERAL */
 
 * {
@@ -17,11 +14,11 @@ a:any-link {
 }
 
 .seeMore a {
-    color: rgb(233, 188, 40);
+    color: map-get($colores, seeMore);
     transition: color 0.5s;
 
     &:hover {
-        color: rgba(253, 255, 0, 1);
+        color: map-get($colores, seeMoreHover);
     }
 }
 
@@ -32,9 +29,7 @@ iframe {
 
 body {
     background-image: url("../../background.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    @include bg-img (no-repeat, center, cover);
     background-attachment: fixed;
     color: #fff;
     max-width: 100vw;
@@ -44,7 +39,7 @@ header {
     grid-area: header;
 }
 
-section {
+main {
     grid-area: main;
 }
 
@@ -64,15 +59,15 @@ section {
 /* ICONOS */
 
 .fa-instagram {
-    color: rgb(199, 101, 168);
+    color: map-get($colores, instagram); 
 }
 
 .fa-facebook {
-    color: rgb(24, 115, 235);
+    color: map-get($colores, facebook);
 }
 
 .fa-youtube {
-    color: rgb(246, 0, 0);
+    color: map-get($colores, youtube);
 }
 
 
@@ -149,4 +144,7 @@ section {
         display: none;
     }
 
+    #discografia, #galeria, #inicio, #shows, #shows-fecha1, #sobreNosotros, #suscribirme, #videos {
+        margin-top: 50px;
+    }
 }

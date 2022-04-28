@@ -1,5 +1,5 @@
 /* --> VARS <-- */
-/* --> BASE <-- */
+/* MIXINS */
 /* GENERAL */
 * {
   margin: 0;
@@ -33,7 +33,7 @@ body {
 header {
   grid-area: header; }
 
-section {
+main {
   grid-area: main; }
 
 .footLeft {
@@ -94,138 +94,102 @@ section {
     display: block; }
   .onlyDesktop {
     visibility: hidden;
-    display: none; } }
+    display: none; }
+  #discografia, #galeria, #inicio, #shows, #shows-fecha1, #sobreNosotros, #suscribirme, #videos {
+    margin-top: 50px; } }
 
 @media only screen and (max-width: 1024px) {
-  .header__container {
-    background: linear-gradient(to bottom, #e9bc28, transparent);
+  body header nav .header__container {
+    background: linear-gradient(to bottom, #c89a01, #f0d50b);
     font-size: 20px;
-    height: 40px;
+    height: 50px;
     transition: height 0.5s; }
-    .header__container:hover {
-      height: 60px; }
-  .navbar-nav {
-    background: linear-gradient(to bottom, rgba(200, 154, 1, 0.5) 1%, rgba(240, 213, 11, 0.5) 90%, transparent 100%); }
-  .nav-link:hover {
-    text-decoration: underline; } }
-
-@media only screen and (min-width: 1024px) {
-  .header__container {
-    background: linear-gradient(to bottom, #e9bc28, transparent);
-    font-size: 20px;
-    height: 40px;
-    transition: height 0.5s; }
-    .header__container:hover {
+    body header nav .header__container:hover {
       height: 60px; } }
 
-.footer__container {
-  background: rgba(145, 145, 145, 0.5); }
-
-.footer-item-icon {
-  font-size: 30px; }
+@media only screen and (min-width: 1024px) {
+  body header nav .header__container {
+    background: linear-gradient(to bottom, #e9bc28, transparent);
+    font-size: 20px;
+    height: 40px;
+    transition: height 0.5s; }
+    body header nav .header__container:hover {
+      height: 60px; } }
 
 @media only screen and (max-width: 1024px) {
-  .index__footer__container {
+  body header nav .header__container div .navbar-nav {
+    background: linear-gradient(to bottom, #c89a01, #f0d50b); } }
+
+@media only screen and (max-width: 1024px) {
+  body header nav .header__container div .navbar-nav .nav-link:hover {
+    text-decoration: underline; } }
+
+@media only screen and (max-width: 1024px) {
+  footer.index__footer__container {
     position: fixed;
-    bottom: 5px; }
-  .index__footer__item {
+    bottom: 5px; } }
+
+@media only screen and (max-width: 1024px) {
+  footer.index__footer__container .index__footer__item {
     display: flex;
     width: 100vw;
     justify-content: space-around;
     align-items: center; } }
 
-#discografia {
+footer.index__footer__container .index__footer__item .footer-item-icon {
+  font-size: 30px; }
+
+footer.footer__container {
+  background: rgba(145, 145, 145, 0.5); }
+  footer.footer__container div .footer-item-icon {
+    font-size: 30px; }
+
+body main#discografia {
   margin-bottom: 300px; }
 
-.galeria__grid-container {
+body main .galeria__grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, 100px);
   grid-auto-rows: 100px;
   grid-row-gap: 10px;
   grid-column-gap: 10px;
   justify-content: center; }
-  .galeria__grid-container .horizontal {
+  body main .galeria__grid-container .horizontal {
     grid-column: span 3;
     grid-row: span 2; }
-  .galeria__grid-container .vertical {
+  body main .galeria__grid-container .vertical {
     grid-row: span 3;
     grid-column: span 2; }
-  .galeria__grid-container img {
+  body main .galeria__grid-container img {
     max-width: 300px;
     max-height: 300px;
     object-fit: cover; }
+  @media only screen and (max-width: 1024px) {
+    body main .galeria__grid-container {
+      grid-template-columns: 100px; } }
 
-.index__button {
-  border-radius: 2em;
-  padding: 10px;
-  color: #000;
-  text-decoration: none;
-  font-weight: bolder;
-  cursor: pointer;
-  background-image: linear-gradient(to right, #d0ab45, #f3d406, #fdff00);
-  background-size: 500%;
-  background-position: left;
-  transition: background-position 0.5s; }
-  .index__button:hover {
-    background-position: right; }
-
-.index--background {
+body.index--background {
   background-image: url("../../galeria/img/DSC_0177.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; }
-
-.inicio__galeria__item1 {
-  object-fit: cover;
-  object-position: center;
-  width: 350px;
-  height: 400px; }
-
-.inicio__galeria__item2 {
-  object-fit: cover;
-  width: 350px;
-  height: 400px;
-  margin-top: -50px; }
-
-.inicio__shows table {
-  margin: auto;
-  background: linear-gradient(to bottom, #e9bc28, #e8f40b);
-  color: #000; }
-
-.inicio__shows__fecha {
-  width: 300px;
-  height: 100px; }
-
-.inicio__shows__fecha--left {
-  font-size: 30px;
-  padding: 0 20px;
-  max-width: 60px; }
-
-.inicio__shows__fecha--right {
-  font-size: 30px;
-  min-width: 240px;
-  padding: 20px; }
-
-.inicio__suscribirme__button {
-  font-size: 20px;
-  border-radius: 2em;
-  padding: 10px;
-  color: #fff;
-  text-decoration: none;
-  cursor: pointer;
-  background-image: linear-gradient(to right, #d0ab45, #f3d406, #fdff00);
-  background-size: 500%;
-  background-position: left;
-  transition: background-position 0.5s; }
-  .inicio__suscribirme__button:hover {
-    background-position: right; }
-
-.inicio__sobreNosotros__item {
-  overflow-y: auto;
-  max-height: 500px; }
+  body.index--background main div .index__button {
+    border-radius: 2em;
+    padding: 10px;
+    color: #000;
+    text-decoration: none;
+    font-weight: bolder;
+    cursor: pointer;
+    background-image: linear-gradient(to right, #d0ab45, #f3d406, #fdff00);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 500%;
+    transition: background-position 0.5s; }
+    body.index--background main div .index__button:hover {
+      background-position: right; }
 
 @media only screen and (min-width: 1024px) {
-  .inicio__main div {
+  body main section.inicio__main div {
     padding: 250px 0;
     background-image: url("../../galeria/img/DSC_0139.png");
     background-repeat: no-repeat;
@@ -238,60 +202,112 @@ section {
     animation-iteration-count: 1; } }
 
 @media only screen and (max-width: 1024px) {
-  .inicio__main div {
+  body main section.inicio__main div {
     background-image: none;
     height: 200px;
-    padding-top: 50px; }
-  .inicio__sobreNosotros__item {
-    width: 100%; } }
+    padding-top: 50px; } }
 
-.shows__item p,
-.shows__item img {
-  max-width: 100%; }
+body main section.inicio__galeria .inicio__galeria__container .inicio__galeria__item1, body main section.inicio__galeria .inicio__galeria__container .inicio__galeria__item2 {
+  object-fit: cover;
+  object-position: center;
+  width: 350px;
+  height: 400px; }
 
-.shows__flyer img {
-  max-width: 100%; }
+body main section.inicio__galeria .inicio__galeria__container .inicio__galeria__item2 {
+  margin-top: -50px; }
 
-.shows__fecha {
+body main section.inicio__shows table {
+  margin: auto;
+  background: linear-gradient(to bottom, #e9bc28, #e8f40b);
+  color: #000; }
+  body main section.inicio__shows table .inicio__shows__fecha {
+    width: 300px;
+    height: 100px; }
+    body main section.inicio__shows table .inicio__shows__fecha--left {
+      font-size: 30px;
+      padding: 0 20px;
+      max-width: 60px; }
+    body main section.inicio__shows table .inicio__shows__fecha--right {
+      font-size: 30px;
+      min-width: 240px;
+      padding: 20px; }
+
+body main section.inicio__sobreNosotros .inicio__sobreNosotros__container .inicio__sobreNosotros__item {
+  overflow-y: auto;
+  max-height: 500px; }
+  @media only screen and (max-width: 1024px) {
+    body main section.inicio__sobreNosotros .inicio__sobreNosotros__container .inicio__sobreNosotros__item {
+      width: 100%; } }
+
+body main section.inicio__suscribirme div .inicio__suscribirme__button {
+  font-size: 20px;
+  border-radius: 2em;
+  padding: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  background-image: linear-gradient(to right, #d0ab45, #f3d406, #fdff00);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 500%;
+  transition: background-position 0.5s; }
+  body main section.inicio__suscribirme div .inicio__suscribirme__button:hover {
+    background-position: right; }
+
+/* SHOWS */
+body main .shows__fecha {
   background: linear-gradient(to bottom, #e9bc28, #e8f40b);
   animation-duration: 1s;
   animation-name: extenderX;
   animation-iteration-count: 1; }
 
+/* SHOWS-FECHA 1 */
+body main .shows__flyer img {
+  max-width: 100%; }
+
+body main .shows__item p,
+body main .shows__item img {
+  max-width: 100%; }
+
 @media only screen and (max-width: 1024px) {
-  .shows__item {
+  body main .shows__item {
     padding: 20px 0; } }
 
-@media only screen and (min-width: 1024px) {
-  .sobreNosotros__beto {
-    max-width: 90%;
-    margin-top: 200px;
-    z-index: -1; }
-  .sobreNosotros__dario {
-    max-width: 90%; }
-  .sobreNosotros__queHacemos div img {
-    max-width: 90%; }
-  .sobreNosotros__integrantes div img {
-    max-width: 80%; } }
-
 @media only screen and (max-width: 1024px) {
-  #sobreNosotros {
+  body main {
     padding: 0 5px; } }
 
-.suscribirme__formulario {
+@media only screen and (min-width: 1024px) {
+  body main .sobreNosotros__quienesSomos div img.sobreNosotros__beto {
+    max-width: 90%;
+    margin-top: 200px;
+    z-index: -1; } }
+
+@media only screen and (min-width: 1024px) {
+  body main .sobreNosotros__quienesSomos div img.sobreNosotros__dario {
+    max-width: 90%; } }
+
+@media only screen and (min-width: 1024px) {
+  body main .sobreNosotros__queHacemos div img {
+    max-width: 90%; } }
+
+@media only screen and (min-width: 1024px) {
+  body main .sobreNosotros__integrantes div img {
+    max-width: 80%; } }
+
+body main div .suscribirme__formulario {
   background: linear-gradient(to bottom, #e9bc28, #e8f40b);
   border-radius: 2em;
   border: 0;
   color: #000; }
 
-.videos__container {
+body main .videos__container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap; }
-  .videos__container iframe {
+  body main .videos__container iframe {
     transition: transform 0.5s;
     animation-duration: 3s;
     animation-name: aparecerYPosicionarse;
     animation-iteration-count: 1; }
-    .videos__container iframe:hover {
+    body main .videos__container iframe:hover {
       transform: scale(1.3); }

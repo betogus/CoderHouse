@@ -1,15 +1,22 @@
-.videos__container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    iframe {
-        transition: transform 0.5s;
-        animation-duration: 3s;
-        animation-name: aparecerYPosicionarse;
-        animation-iteration-count: 1;
-        &:hover {
-            transform: scale(1.3);
-    
+body {
+    main {
+        .videos__container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            iframe {
+                transition: transform 0.5s;
+                animation-duration: 3s;
+                animation-name: aparecerYPosicionarse;
+                animation-iteration-count: 1;
+                &:hover {
+                    transform: scale(1.3);
+            
+                }
+            }
         }
     }
 }
+
+
+

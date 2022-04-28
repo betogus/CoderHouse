@@ -1,8 +1,22 @@
 /* --> VARS <-- */
+$colores: (
+    instagram: rgb(199, 101, 168),
+    facebook: rgb(24, 115, 235),
+    youtube: rgb(246, 0, 0),
+    seeMore: rgb(233, 188, 40),
+    seeMoreHover: rgba(253, 255, 0, 1),
+    color-principal: linear-gradient(to bottom, rgb(233, 188, 40), rgb(232, 244, 11)),
+    color-header: linear-gradient(to bottom, rgb(233, 188, 40), transparent),
+    color-footer: rgba(145, 145, 145, 0.5),
+    color-header-device: linear-gradient(to bottom, rgb(200, 154, 1), rgb(240, 213, 11)),
+    color-button: linear-gradient(to bottom, rgb(200, 154, 1), rgb(240, 213, 11)),
+    color-button-index: linear-gradient(to right, rgba(208, 171, 69, 1), rgba(243, 212, 6, 1), rgba(253, 255, 0, 1)),
+);
 
-$color-principal: linear-gradient(to bottom, rgb(233, 188, 40), rgb(232, 244, 11));
-$color-header: linear-gradient(to bottom, rgb(233, 188, 40), transparent);
-$color-footer: rgba(145, 145, 145, 0.5);
-$color-header-device: linear-gradient(to bottom, rgba(200, 154, 1, 0.5) 1%, rgba(240, 213, 11, 0.5) 90%, transparent 100%);
-$color-button: linear-gradient(to bottom, rgb(200, 154, 1), rgb(240, 213, 11));
-$color-button-index: linear-gradient(to right, rgba(208, 171, 69, 1), rgba(243, 212, 6, 1), rgba(253, 255, 0, 1));
+/* MIXINS */
+
+@mixin bg-img($bg-repeat,$bg-position,$bg-size) {
+    background-repeat: $bg-repeat;
+    background-position: $bg-position;
+    background-size: $bg-size;
+};
