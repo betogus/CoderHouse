@@ -1,12 +1,16 @@
 body {
-    main {
+    main.suscribirme {
         div {
+            @media only screen and (min-width:1024px) {
+                margin-bottom: 400px;
+            }
             .suscribirme__formulario {
 
                 background: map-get($colores, color-principal);
                 border-radius: 2em;
                 border: 0;
                 color: #000;
+
             }
 
         }

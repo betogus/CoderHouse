@@ -1,5 +1,5 @@
-/* --> VARS <-- */
-/* MIXINS */
+/* --> MAP <-- */
+/* MIXIN */
 /* GENERAL */
 * {
   margin: 0;
@@ -22,13 +22,9 @@ iframe {
   max-width: 90%; }
 
 body {
-  background-image: url("../../background.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background: radial-gradient(circle, #181818 0%, black 100%);
   background-attachment: fixed;
-  color: #fff;
-  max-width: 100vw; }
+  color: #fff; }
 
 header {
   grid-area: header; }
@@ -68,6 +64,14 @@ main {
     transform: scaleX(0); }
   100% {
     transform: scaleX(1); } }
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9); }
+  50% {
+    transform: scale(1); }
+  100% {
+    transform: scale(0.9); } }
 
 /* MEDIA QUERIES */
 @media only screen and (min-width: 1024px) {
@@ -109,7 +113,7 @@ main {
 
 @media only screen and (min-width: 1024px) {
   body header nav .header__container {
-    background: linear-gradient(to bottom, #e9bc28, transparent);
+    background: linear-gradient(to bottom, rgba(233, 188, 40, 0.5), transparent);
     font-size: 20px;
     height: 40px;
     transition: height 0.5s; }
@@ -127,7 +131,8 @@ main {
 @media only screen and (max-width: 1024px) {
   footer.index__footer__container {
     position: fixed;
-    bottom: 5px; } }
+    bottom: 5px;
+    z-index: 3; } }
 
 @media only screen and (max-width: 1024px) {
   footer.index__footer__container .index__footer__item {
@@ -140,7 +145,8 @@ footer.index__footer__container .index__footer__item .footer-item-icon {
   font-size: 30px; }
 
 footer.footer__container {
-  background: rgba(145, 145, 145, 0.5); }
+  background: rgba(145, 145, 145, 0.3);
+  color: #fff; }
   footer.footer__container div .footer-item-icon {
     font-size: 30px; }
 
@@ -164,29 +170,73 @@ body main .galeria__grid-container {
     max-width: 300px;
     max-height: 300px;
     object-fit: cover; }
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 767px) {
     body main .galeria__grid-container {
       grid-template-columns: 100px; } }
 
 body.index--background {
-  background-image: url("../../galeria/img/DSC_0177.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; }
-  body.index--background main div .index__button {
-    border-radius: 2em;
-    padding: 10px;
-    color: #000;
-    text-decoration: none;
-    font-weight: bolder;
-    cursor: pointer;
-    background-image: linear-gradient(to right, #d0ab45, #f3d406, #fdff00);
-    background-repeat: no-repeat;
-    background-position: left;
-    background-size: 500%;
-    transition: background-position 0.5s; }
-    body.index--background main div .index__button:hover {
-      background-position: right; }
+  background: #000; }
+  @media only screen and (max-width: 768px) {
+    body.index--background main div.index--center .index__imagenes {
+      flex-wrap: wrap; } }
+  @media only screen and (max-width: 768px) {
+    body.index--background main div.index--center .index__imagenes .index__imagenes__item {
+      height: 50%;
+      width: 49%;
+      margin-top: 40px;
+      margin-left: 3px; } }
+  @media only screen and (min-width: 768x) {
+    body.index--background main div.index--center .index__imagenes .index__imagenes__item {
+      width: 300px;
+      height: 450px; } }
+  body.index--background main div.index--center .index__imagenes .index__imagenes__item::before {
+    position: absolute;
+    object-position: 0%;
+    object-fit: cover;
+    content: ' ';
+    background: transparent;
+    border: #000 solid 20px;
+    filter: blur(10px);
+    z-index: 2;
+    outline: #000 20px solid; }
+    @media only screen and (min-width: 768px) {
+      body.index--background main div.index--center .index__imagenes .index__imagenes__item::before {
+        height: 450px;
+        width: 300px; } }
+    @media only screen and (max-width: 768px) {
+      body.index--background main div.index--center .index__imagenes .index__imagenes__item::before {
+        height: 40%;
+        width: 49%;
+        margin-left: 3px; } }
+  body.index--background main div.index--center .index__imagenes .index__imagenes__item img {
+    object-fit: cover; }
+    @media only screen and (max-width: 768px) {
+      body.index--background main div.index--center .index__imagenes .index__imagenes__item img {
+        height: 100%;
+        width: 100%;
+        max-width: 50vw;
+        max-height: 50vh;
+        object-fit: cover; } }
+    @media only screen and (min-width: 768px) {
+      body.index--background main div.index--center .index__imagenes .index__imagenes__item img {
+        width: 300px;
+        height: 450px; } }
+  body.index--background main div.index--center .jamglass--button {
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    left: 50%;
+    right: 50%;
+    z-index: 3;
+    opacity: 0.8;
+    filter: brightness(1);
+    transition: filter 0.5s; }
+    body.index--background main div.index--center .jamglass--button:hover {
+      filter: brightness(1.3); }
+    body.index--background main div.index--center .jamglass--button a .pulse {
+      animation-name: pulse;
+      animation-duration: 2.5s;
+      animation-iteration-count: infinite; }
 
 @media only screen and (min-width: 1024px) {
   body main section.inicio__main div {
@@ -210,7 +260,7 @@ body.index--background {
 body main section.inicio__galeria .inicio__galeria__container .inicio__galeria__item1, body main section.inicio__galeria .inicio__galeria__container .inicio__galeria__item2 {
   object-fit: cover;
   object-position: center;
-  width: 350px;
+  width: 300px;
   height: 400px; }
 
 body main section.inicio__galeria .inicio__galeria__container .inicio__galeria__item2 {
@@ -294,7 +344,11 @@ body main .shows__item img {
   body main .sobreNosotros__integrantes div img {
     max-width: 80%; } }
 
-body main div .suscribirme__formulario {
+@media only screen and (min-width: 1024px) {
+  body main.suscribirme div {
+    margin-bottom: 400px; } }
+
+body main.suscribirme div .suscribirme__formulario {
   background: linear-gradient(to bottom, #e9bc28, #e8f40b);
   border-radius: 2em;
   border: 0;

@@ -2,6 +2,7 @@ footer.index__footer__container {
     @media only screen and (max-width:1024px) {
         position: fixed;
         bottom: 5px;
+        z-index: 3;
     }
 
     .index__footer__item {
@@ -13,13 +14,14 @@ footer.index__footer__container {
         }
         .footer-item-icon {
             font-size: 30px;
+            
         }
     }
 }
 
 footer.footer__container {
     background: map-get($colores, color-footer);
-
+    color: #fff;
     div {
         .footer-item-icon {
             font-size: 30px;
