@@ -183,7 +183,6 @@ body.index--background {
     body.index--background main div.index--center .index__imagenes .index__imagenes__item {
       height: 50%;
       width: 49%;
-      margin-top: 40px;
       margin-left: 3px; } }
   @media only screen and (min-width: 768x) {
     body.index--background main div.index--center .index__imagenes .index__imagenes__item {
