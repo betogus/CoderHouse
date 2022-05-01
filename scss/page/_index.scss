@@ -22,31 +22,6 @@ body.index--background {
                         height: 450px;
                     }
 
-                    &::before {
-                        position: absolute;
-                        object-position: 0%;
-                        object-fit: cover;
-                        content: ' ';
-                        background: transparent;
-                        border: #000 solid 20px;
-                        filter: blur(10px);
-                        z-index: 2;
-                        outline: #000 20px solid;
-
-                        @media only screen and (min-width:768px) {
-                            height: 450px;
-                            width: 300px;
-                        }
-
-                        @media only screen and (max-width:768px) {
-
-                            height: 40%;
-                            width: 49%;
-                            margin-left: 3px;
-                        }
-
-                    }
-
                     & img {
                         @media only screen and (max-width:768px) {
 
@@ -54,7 +29,6 @@ body.index--background {
                             width: 100%;
                             max-width: 50vw;
                             max-height: 50vh;
-                            object-fit: cover;
                         }
 
                         @media only screen and (min-width:768px) {
