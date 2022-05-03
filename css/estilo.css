@@ -178,7 +178,9 @@ body.index--background {
   background: #000; }
   @media only screen and (max-width: 768px) {
     body.index--background main div.index--center .index__imagenes {
-      flex-wrap: wrap; } }
+      flex-wrap: wrap;
+      height: 100vh;
+      align-items: center; } }
   @media only screen and (max-width: 768px) {
     body.index--background main div.index--center .index__imagenes .index__imagenes__item {
       height: 50%;
@@ -206,12 +208,15 @@ body.index--background {
     bottom: 50%;
     left: 50%;
     right: 50%;
-    z-index: 3;
-    opacity: 0.8;
-    filter: brightness(1);
-    transition: filter 0.5s; }
-    body.index--background main div.index--center .jamglass--button:hover {
-      filter: brightness(1.3); }
+    z-index: 3; }
+    @media only screen and (min-width: 768px) {
+      body.index--background main div.index--center .jamglass--button {
+        opacity: 0.6;
+        filter: brightness(1);
+        transition: all 0.5s; }
+        body.index--background main div.index--center .jamglass--button:hover {
+          filter: brightness(1.3);
+          opacity: 0.9; } }
     body.index--background main div.index--center .jamglass--button a .pulse {
       animation-name: pulse;
       animation-duration: 2.5s;
