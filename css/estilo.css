@@ -338,14 +338,49 @@ body main.suscribirme div .suscribirme__formulario {
   border: 0;
   color: #000; }
 
-body main .videos__container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap; }
-  body main .videos__container iframe {
-    transition: transform 0.5s;
-    animation-duration: 3s;
-    animation-name: aparecerYPosicionarse;
-    animation-iteration-count: 1; }
-    body main .videos__container iframe:hover {
-      transform: scale(1.3); }
+body main .videos-contenedor {
+  margin-bottom: 200px; }
+  body main .videos-contenedor .contenedor-principal {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap; }
+    body main .videos-contenedor .contenedor-principal .flecha-izquierda, body main .videos-contenedor .contenedor-principal .flecha-derecha {
+      float: left;
+      border: none;
+      background: #000;
+      font-size: 40px;
+      height: 100%;
+      line-height: 40px;
+      width: 90px;
+      color: #fff;
+      cursor: pointer;
+      z-index: 500;
+      transition: .2s ease all; }
+      body main .videos-contenedor .contenedor-principal .flecha-izquierda:hover, body main .videos-contenedor .contenedor-principal .flecha-derecha:hover {
+        background: black; }
+    body main .videos-contenedor .contenedor-principal .flecha-derecha {
+      float: right; }
+    body main .videos-contenedor .contenedor-principal .contenedor-carousel {
+      padding: 30px 0px;
+      height: 340px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-direction: row; }
+      body main .videos-contenedor .contenedor-principal .contenedor-carousel .video {
+        transition: .3s ease all;
+        height: 100%; }
+        @media only screen and (min-width: 1024px) {
+          body main .videos-contenedor .contenedor-principal .contenedor-carousel .video {
+            min-width: 33%; } }
+        @media only screen and (max-width: 1024px) {
+          body main .videos-contenedor .contenedor-principal .contenedor-carousel .video {
+            min-width: 100%; } }
+        body main .videos-contenedor .contenedor-principal .contenedor-carousel .video iframe {
+          width: 100%;
+          vertical-align: top;
+          height: 100%;
+          transition: transform 0.5s; }
+          body main .videos-contenedor .contenedor-principal .contenedor-carousel .video iframe:hover {
+            transform: scale(1.3); }
